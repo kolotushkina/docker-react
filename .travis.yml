@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t kolotushkina/docker-react-image -f Dockerfile.dev .
+  - docker build -t kolotushkina/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true kolotushkina/docker-react-image npm run test 
+  - docker run -e CI=true kolotushkina/docker-react npm run test
